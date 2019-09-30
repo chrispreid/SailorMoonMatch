@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Sailor Moon Match</title>
+    <link href="stylesheet.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+   <img class="background" src="https://i.pinimg.com/originals/b4/8f/2a/b48f2a8b493cf601f77f67e72261a8a4.gif"></img>
+   <div class="start-game"> 
+     <img class="start-background"></img>
+     <h1>Sailor Moon Match</h1>
+     <button class="start" button type="button">Start Game</button>
+     <p class="rules">How to Play</p>
+     <ul>
+      <li>Match each character with its pair before time runs out</li>
+      <li>Don't match the evil queen until the end...or else!</li>
+       </ul>
+    </div> 
+   
+   <header>
+     <img id="moon-girl" src="https://i.imgur.com/3C7at4g.png"></img>
+      <button class="reset" type="button">Reset Game</button>
+    <!-- </div> -->
+    <div class="timer">60</div> 
+  </header>
+
+<section class="cards">
+  <div class="flipper" data-framework="pluto">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsWM_ACbypS1mD_xrPQ7phM_90qiE1Zty3uexOmEiVp4_sgeVepw" class="front-face"></img>
+    <img class="back-face" src="https://66.media.tumblr.com/83a3c85187b4c1e6c58e14438b67d130/tumblr_oxgenllFFB1w646c4o1_500.gif"></img>
+  </div>
+  <div class="flipper" data-framework="pluto">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsWM_ACbypS1mD_xrPQ7phM_90qiE1Zty3uexOmEiVp4_sgeVepw" class="front-face"></img>
+    <img class="back-face" src="https://66.media.tumblr.com/83a3c85187b4c1e6c58e14438b67d130/tumblr_oxgenllFFB1w646c4o1_500.gif"></img>
+  </div>
+  <div class="flipper" data-framework="moon">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsWM_ACbypS1mD_xrPQ7phM_90qiE1Zty3uexOmEiVp4_sgeVepw" class="front-face"></img>
+    <img class="back-face" src="https://66.media.tumblr.com/58e83e91ed154fbb24f7ba2c63489f50/tumblr_oj073fUADL1ueizsio8_400.gif"></img>
+  </div>
+  <div class="flipper" data-framework="moon">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsWM_ACbypS1mD_xrPQ7phM_90qiE1Zty3uexOmEiVp4_sgeVepw" class="front-face"></img>
+    <img class="back-face" src="https://66.media.tumblr.com/58e83e91ed154fbb24f7ba2c63489f50/tumblr_oj073fUADL1ueizsio8_400.gif"></img>
+  </div>
+  <div class="flipper" data-framework="mercury">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsWM_ACbypS1mD_xrPQ7phM_90qiE1Zty3uexOmEiVp4_sgeVepw" class="front-face"></img>
+    <img class="back-face" src="https://66.media.tumblr.com/85493675d2ea70a2db8b03ab65293f36/tumblr_p8e5oape4A1x6plgko1_500.gif"></img>
+  </div>
+  <div class="flipper" data-framework="mercury">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsWM_ACbypS1mD_xrPQ7phM_90qiE1Zty3uexOmEiVp4_sgeVepw" class="front-face"></img>
+    <img class="back-face" src="https://66.media.tumblr.com/85493675d2ea70a2db8b03ab65293f36/tumblr_p8e5oape4A1x6plgko1_500.gif"></img>
+  </div>
+  <div class="flipper" data-framework="queen-beryl">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsWM_ACbypS1mD_xrPQ7phM_90qiE1Zty3uexOmEiVp4_sgeVepw" class="front-face"></img>
+    <img class="back-face" src="https://66.media.tumblr.com/tumblr_m302cineVT1r3a89ro1_400.gif"></img>
+  </div>
+  <div class="flipper" data-framework="queen-beryl">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsWM_ACbypS1mD_xrPQ7phM_90qiE1Zty3uexOmEiVp4_sgeVepw" class="front-face"></img>
+    <img class="back-face" src="https://66.media.tumblr.com/tumblr_m302cineVT1r3a89ro1_400.gif"></img>
+  </div>
+  <div class="flipper" data-framework="sailor-mars">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsWM_ACbypS1mD_xrPQ7phM_90qiE1Zty3uexOmEiVp4_sgeVepw" class="front-face"></img>
+    <img class="back-face" src="https://66.media.tumblr.com/c36dff054e1083a1802c1af1ce42727d/tumblr_p5wvu15dTO1x2hd5po1_500.gif"></img>
+  </div>
+  <div class="flipper" data-framework="sailor-mars">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsWM_ACbypS1mD_xrPQ7phM_90qiE1Zty3uexOmEiVp4_sgeVepw" class="front-face"></img>
+    <img class="back-face" src="https://66.media.tumblr.com/c36dff054e1083a1802c1af1ce42727d/tumblr_p5wvu15dTO1x2hd5po1_500.gif"></img>
+  </div>
+  <div class="flipper" data-framework="artemis-luna">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsWM_ACbypS1mD_xrPQ7phM_90qiE1Zty3uexOmEiVp4_sgeVepw" class="front-face"></img>
+    <img class="back-face" src="https://66.media.tumblr.com/870b3f676672038efec6768389e7c42b/tumblr_p7929qW8xI1x6ms67o1_500.gif"></img>
+  </div>
+  <div class="flipper" data-framework="artemis-luna">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsWM_ACbypS1mD_xrPQ7phM_90qiE1Zty3uexOmEiVp4_sgeVepw" class="front-face"></img>
+    <img class="back-face" src="https://66.media.tumblr.com/870b3f676672038efec6768389e7c42b/tumblr_p7929qW8xI1x6ms67o1_500.gif"></img>
+  </div>
+  
+  </section>
+
+  <div class="lose-over">
+    <img class="laugh" src="https://partlydrawn.files.wordpress.com/2017/11/esmeraude.gif?w=490"></img>
+    <p class ="lose"></p>
+    <button class="lose-start" type="button">Play Again?</button>
+  </div>
+
+  <div class="win-over">
+    <img class="yay" src="https://media.giphy.com/media/wue4QtxncWuE8/giphy.gif"></img>
+    <p class ="win"></p>
+    <p class="score"></p>
+    <button class="win-start" type="button">Play Again?</button>
+  </div>
+  
+    <script src="script.js"></script>
+  </body>
+</html>

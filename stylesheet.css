@@ -1,0 +1,363 @@
+@import url('https://fonts.googleapis.com/css?family=Amarante&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Amarante', cursive;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-flow: wrap;
+  cursor: url('https://i.imgur.com/4rupkIP.png'), auto;
+}
+
+
+.background {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+}
+
+.backdrop {
+  width: 100%;
+   height: 100%;
+}
+
+header {
+ display: flex;
+ width: 100%;
+ justify-content: space-between;
+ align-items: center;
+ margin: 10px;
+ z-index: 0;
+}
+
+#moon-girl {
+  width: 50px;
+  height: 50px;
+  margin-left: 5%;
+  cursor: url('https://i.imgur.com/cfbyxbU.png'), auto;
+}
+
+.start-game {
+  display: flex;
+  background: black;
+  width: calc(100%);
+  height: 100vh;
+  justify-content: center;
+  position: fixed;
+  z-index: 5;
+}
+
+.start-background {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 0;
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+}
+
+h1 {
+  font-size: 50px;
+  color: rgba(193, 66, 66, .7);
+  text-align: center;
+  text-shadow: 2px 2px rgba(0, 0, 0, .4);
+  background: url(https://media.giphy.com/media/mnoZ5uv9O8mha/giphy.gif) center no-repeat;
+  background-size: 50%;
+  position: absolute;
+  top: 10%;
+  z-index: 6;
+  padding: 5px;
+}
+
+
+.start {
+  display: flex;
+  color: white;
+  font-size: 30px;
+  text-shadow: 1px 1px #afb4d1;
+  width: 200px;
+  height: 100px;
+  align-content: center;
+  justify-content: center;
+  border-radius: 5%;
+  border: none;
+  box-shadow: 0px 8px 15px #afb4d1;
+  position: absolute;
+  top: 40%; 
+  z-index: 1;
+  background: transparent;
+  background:url(https://66.media.tumblr.com/d86b94d0756224e1e4c7f17015a1e884/tumblr_osmxs93UEQ1wr53lto1_500.gif) no-repeat;
+  background-size: 100%;
+  cursor: url('https://i.imgur.com/cfbyxbU.png'), auto;
+}
+
+.rules {
+  color: white;
+  text-shadow: 2px 2px black;
+  font-size: 30px;
+  text-align: center;
+  position: fixed;
+  bottom: 17%;
+  z-index: 6;
+  padding: 5px;
+  margin: 5px;
+}
+
+ul {
+  position: fixed;
+  list-style-type: none;
+  margin: 5px;
+  color: white;
+  text-align: center;
+  bottom: 5%;
+  z-index: 6;
+}
+
+
+
+.reset {
+  display: flex;
+  color: #fff;
+  font-size: 15px;
+  text-shadow: 1px 1px #afb4d1;
+  width: 100px;
+  height: 50px;
+  align-content: center;
+  justify-content: center;
+  border-radius: 5px;
+  box-shadow: 3px 2px 3px 0px rgba(46, 61, 73, 0.5);
+  background:url(https://i.redd.it/7mzvnsb08rnz.gif) no-repeat;
+  background-size: 100%;
+  cursor: url('https://i.imgur.com/cfbyxbU.png'), auto;
+}
+
+.timer {
+  display: flex;
+  width: 50px;
+  height: 20px;
+  padding-top: 5px;
+  align-content: center;
+  justify-content: center;
+  margin-right: 5%;
+}
+
+img {
+  width: 100px;
+  
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  width: 440px;
+  height: 440px;
+  margin: auto;
+  perspective: 1000px; /* for 3d effect (flipping) */
+  background: transparent;
+}
+
+.flipper {
+  width: calc(33.333% - 10px);
+  height: calc(25% - 10px);
+  margin: 5px;
+  position: relative;
+  -webkit-transform: scale(1);
+  -webkit-transform-style: preserve-3d;
+  -webkit-transition: transform .5s;
+  transform: scale(1);
+  transform-style: preserve-3d;
+  transition: transform .5s; /* time it takes to flip */
+}
+
+.flipper:active {
+-webkit-transform: scale(.97);
+-webkit-transition: transform .2s;
+transform: scale(.97);
+transition: transform .2s;
+}
+
+.flipper.flip {
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.invis {
+  opacity: 0;
+}
+
+.visible {
+  opacity: 100;
+}
+
+.front-face, .back-face {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  box-shadow: 5px 2px 5px 0 rgba(46, 61, 73, 0.5);
+  border-radius: 5px;
+}
+
+.back-face {
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.lose-over {
+  display: none;
+  width: calc(100%);
+  height: 100vh;
+  justify-content: center;
+  text-align: center;
+  position: fixed;
+  background: linear-gradient(90deg, rgb(35,66,38,1) 0%, rgb(47, 115, 53,1) 35%, rgb(117,234,127,1) 100%); 
+}
+
+.win-over {
+  display: none;
+  /* flex-direction: column; */
+  width: calc(100%);
+  height: 100vh;
+  justify-content: center;
+  text-align: center;
+  position: fixed;
+  background: linear-gradient(90deg, rgb(35,66,38,1) 0%, rgb(47, 115, 53,1) 35%, rgb(117,234,127,1) 100%);
+}
+
+.laugh {
+  display: hidden;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+}
+
+.yay {
+  display: hidden;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+}
+
+.lose {
+  font-size: 50px;
+  color: red;
+  text-shadow: 1px 1px #82271B;
+  z-index: 2;
+}
+
+.win {
+  font-size: 50px;
+  font-weight: lighter;
+  color: rgba(196, 17, 212, 0.91);
+  text-shadow: 0.1em 0.1em 0.2em black;
+  z-index: 2;
+}
+
+.score {
+  position: absolute;
+  top: 10%;
+  font-size: 20px;
+  color: rgba(17, 192, 212, 0.92);
+  text-shadow: 0.1em 0.1em 0.2em black;
+  z-index: 3;
+
+}
+
+.lose-start {
+  display: flex;
+  color: white;
+  font-size: 30px;
+  width: 200px;
+  height: 100px;
+  align-content: center;
+  justify-content: center;
+  border-radius: 5%;
+  -webkit-border: 1px solid white;
+  border: 1px solid white;
+  /* box-shadow: 0px 8px 15px #afb4d1; */
+  position: absolute;
+  top: 40%; 
+  z-index: 3;
+  background: transparent;
+  background-size: 100%;
+  cursor: url('https://i.imgur.com/cfbyxbU.png'), auto;
+}
+
+.win-start {
+  display: flex;
+  color: white;
+  font-size: 30px;
+  width: 200px;
+  height: 100px;
+  align-content: center;
+  justify-content: center;
+  border-radius: 5%;
+  -webkit-border: 1px solid white;
+  border: 1px solid white;
+  /* box-shadow: 0px 8px 15px #afb4d1; */
+  position: absolute;
+  top: 40%; 
+  z-index: 4;
+  background: transparent;
+  background-size: 100%;
+  cursor: url('https://i.imgur.com/cfbyxbU.png'), auto;
+}
+
+.laugh {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+}
+
+.yay {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+}
+
+@media only screen and (min-width: 768px) {
+
+.cards {
+    width: 640px;
+    height: 640px;
+}
+
+.flipper {
+    height: calc(33.333% - 10px);
+    width: calc(25% - 10px);
+}
+
+.rules {
+  bottom: 27%;
+}
+
+ul {
+  font-size: 20px;
+  line-height: 30px;
+  bottom: 18%;
+}
+
+.lose {
+  font-size: 70px;
+}
+
+.win {
+  font-size: 70px;
+  margin-top: 5px;
+}
+
+.score {
+  top: 14%;
+  font-size: 35px;
+}
+
+}
